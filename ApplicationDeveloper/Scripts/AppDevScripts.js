@@ -6,6 +6,7 @@
 
 
 $(document).ready(function () {
+
     $('#trades').DataTable({
         columns: [
             { data: "TradeDate", render: function (data) { return formDate(data)} },
@@ -18,6 +19,23 @@ $(document).ready(function () {
             { data: "Currency" }
         ]
     });
+
+    $('#ajaxtrades').DataTable( {
+        ajax: {
+            url: '/api/TradeAPI',
+            dataSrc: ''
+        },
+        columns: [
+            { data: "TradeDate", render: function (data) { return formDate(data) } },
+            { data: "SettleDate", render: function (data) { return formDate(data) } },
+            { data: "Symbol" },
+            { data: "Account" },
+            { data: "Quantity" },
+            { data: "Price", render: $.fn.dataTable.render.number(',', '.', 2, '$') },
+            { data: "Principal" },
+            { data: "Currency" }
+        ]
+    } );
 
 });
 

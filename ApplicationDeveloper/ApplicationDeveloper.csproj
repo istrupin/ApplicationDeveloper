@@ -224,6 +224,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Trade\Index.cshtml" />
     <Content Include="Scripts\jquery-2.2.4.min.map" />
+    <Content Include="Views\Trade\AjaxTrades.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApplicationDeveloper.Data\ApplicationDeveloper.Data.csproj">
