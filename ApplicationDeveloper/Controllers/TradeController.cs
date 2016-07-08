@@ -14,7 +14,7 @@ namespace ApplicationDeveloper.Controllers
         {
             var repo = new TradeRepository();
             var trades = repo.GetTrades();
-            return View(trades);
+            return View("Index",trades);
         }
         public ActionResult AjaxTrades()
         {
